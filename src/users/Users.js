@@ -8,17 +8,13 @@ export default function Users() {
     const { url } = useRouteMatch();
 
     return (
-        <div className="users">
-            <div style={{position: 'relative'}}> 
-                <h2 style={{textAlign: 'left'}}>Users Module</h2>
-                <button className="users-table-btn" style={{position: 'absolute', right: '5px', top: '0'}}>Add</button>
-            </div>
-            <Switch>
+        <div className="users">            
+            <Switch>                
                 <Route path={`${url}/:id`} render={({match}) => {
-                    return <UserDetails userId={match.params.id} />
+                    return <UserDetails userId={match.params.id} type="view"/>
                 }} />
                 <Route path={`${url}`} render={() => {
-                    return <UsersList />
+                    return <UsersList/>
                 }} />                
             </Switch>
         </div>

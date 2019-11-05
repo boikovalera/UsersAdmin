@@ -11,7 +11,7 @@ export default function App() {
     <Router>
       <div>
         <Header></Header>
-        <Switch>
+        <Switch>                    
           <Route path='/about' component={About} />
           <Route path='/albums' component={Albums} />
           <Route path='/users' component={Users} />

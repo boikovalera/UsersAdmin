@@ -13,15 +13,12 @@ export default function AlbumDetails({albumId}) {
             .then(setPhoto)
     }, [])
 
-    return (
-        <div>
-        {
+    return (        
             photos.map(photo => (
                 <PhotoDetals
                     key={photo.id} 
                     photo={photo} />
             ))
-        }   
-        </div>     
+                   
     )
 }
