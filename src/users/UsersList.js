@@ -27,8 +27,7 @@ export default function UsersList() {
                         <th>Username</th>
                         <th>Email</th>                    
                         <th>Phone</th>
-                        <th>Website</th>                    
-                        <th style={{width: '150px'}}></th>
+                        <th>Website</th>                        
                     </tr>
                 </thead>
                 <tbody>
