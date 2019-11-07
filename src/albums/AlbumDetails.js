@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import propTypes from 'prop-types'
 import PhotoDetals from './PhotoDetals'
 import config from '../config';
 
@@ -21,4 +22,8 @@ export default function AlbumDetails({albumId}) {
             ))
                    
     )
+}
+
+AlbumDetails.propTypes = {
+    albumId: propTypes.number.isRequired
 }

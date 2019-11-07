@@ -1,7 +1,11 @@
 import React from 'react'
+import PropTypes from '../propTypes'
 import './Albums.css'
 
-export default function PhotoDetals({photo}) {
+export default function PhotoDetals(props) {
+
+    const photo = props.photo
+
     return (
         <div className="photo-detals">
             <div className="photo-detals-title">
@@ -13,4 +17,8 @@ export default function PhotoDetals({photo}) {
             </div>
         </div>
     )    
+}
+
+PhotoDetals.propTypes = {
+    photo: PropTypes.photo.isRequired
 }

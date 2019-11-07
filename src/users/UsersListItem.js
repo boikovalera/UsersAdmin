@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from '../propTypes';
 import {Link, useRouteMatch} from 'react-router-dom';
 
 export default function UsersListItem(props) {
@@ -7,28 +8,41 @@ export default function UsersListItem(props) {
     const user = props.user
     
     return (
-        
         <tr>
-            <td>{user.id}</td>
-            <td>            
+            <td>
+                <Link to={`${url}/${user.id}`}>
+                    {user.id}
+                </Link>
+            </td>
+            <td>
                 <Link to={`${url}/${user.id}`}>
                     {user.name}
                 </Link>
-            </td>            
-            <td>{user.username}</td>
-            <td>{user.email}</td>    
-            <td>{user.phone}</td>
-            <td>{user.website}</td>
+            </td>
             <td>
-                <button className="users-table-btn" 
-                    onClick={props.onEditUser.bind(null, props.user)}>
-                    edit
-                </button>
-                <button className="users-table-btn"
-                    onClick={props.onRemoveUser.bind(null, props.user)}>
-                    remove
-                </button>
+                <Link to={`${url}/${user.id}`}>
+                    {user.username}
+                </Link>
+            </td>
+            <td>
+                <Link to={`${url}/${user.id}`}>
+                    {user.email}
+                </Link>
+            </td>
+            <td>
+                <Link to={`${url}/${user.id}`}>
+                    {user.phone}
+                </Link>
+            </td>
+            <td>
+                <Link to={`${url}/${user.id}`}>
+                    {user.website}
+                </Link>
             </td>
         </tr>
     )
+}
+
+UsersListItem.prototype = {
+    user: PropTypes.user.isRequired
 }

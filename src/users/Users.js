@@ -11,7 +11,7 @@ export default function Users() {
         <div className="users">            
             <Switch>                
                 <Route path={`${url}/:id`} render={({match}) => {
-                    return <UserDetails userId={match.params.id} type="view"/>
+                    return <UserDetails userId={match.params.id}/>
                 }} />
                 <Route path={`${url}`} render={() => {
                     return <UsersList/>
